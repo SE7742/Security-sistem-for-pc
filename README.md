@@ -1,61 +1,61 @@
-# PC GÃ¼venlik Sistemi
+# PC Güvenlik Sistemi
 
-YÃ¼z tanÄ±ma teknolojisi ile Ã§alÄ±ÅŸan Windows gÃ¼venlik sistemi.
+Yüz tanıma teknolojisi ile çalışan Windows güvenlik sistemi.
 
-## Ã–zellikler
+## Özellikler
 
-- **YÃ¼z TanÄ±ma**: OpenCV + LBPH tabanlÄ±, hafif ve hÄ±zlÄ±
-- **Telegram Bildirimi**: Bilinmeyen kiÅŸi tespitinde anlÄ±k uyarÄ±
-- **Otomatik BaÅŸlangÄ±Ã§**: Windows aÃ§Ä±lÄ±ÅŸÄ±nda 8 saniye gÃ¼venlik taramasÄ±
-- **KullanÄ±cÄ± ArayÃ¼zÃ¼**: Kolay yÃ¶netim iÃ§in GUI
+- **Yüz Tanıma**: OpenCV + LBPH tabanlı, hafif ve hızlı
+- **Telegram Bildirimi**: Bilinmeyen kişi tespitinde anlık uyarı
+- **Otomatik Başlangıç**: Windows açılışında 8 saniye güvenlik taraması
+- **Kullanıcı Arayüzü**: Kolay yönetim için GUI
 
 ## Kurulum
 
-### 1. BaÄŸÄ±mlÄ±lÄ±klarÄ± Kur
+### 1. Bağımlılıkları Kur
 
-`ash
+```bash
 pip install -r requirements.txt
-`
+```
 
-### 2. AyarlarÄ± YapÄ±landÄ±r
+### 2. Ayarları Yapılandır
 
-`ash
-# env.example dosyasÄ±nÄ± .env olarak kopyala
+```bash
+# env.example dosyasını .env olarak kopyala
 copy env.example .env
 
-# .env dosyasÄ±nÄ± dÃ¼zenle ve token'larÄ±nÄ± gir
+# .env dosyasını düzenle ve token'larını gir
 notepad .env
-`
+```
 
-### 3. Ã‡alÄ±ÅŸtÄ±r
+### 3. Çalıştır
 
-`ash
+```bash
 python main.py
-`
+```
 
 ## Telegram Bot Kurulumu
 
-1. Telegram'da [@BotFather](https://t.me/BotFather) ile konuÅŸun
-2. `/newbot` komutu ile bot oluÅŸturun
-3. Token'Ä± kopyalayÄ±n
-4. [@userinfobot](https://t.me/userinfobot) ile Chat ID Ã¶ÄŸrenin
-5. `.env` dosyasÄ±na token ve chat ID'yi yazÄ±n
+1. Telegram'da [@BotFather](https://t.me/BotFather) ile konuşun
+2. `/newbot` komutu ile bot oluşturun
+3. Token'ı kopyalayın
+4. [@userinfobot](https://t.me/userinfobot) ile Chat ID öğrenin
+5. `.env` dosyasına token ve chat ID'yi yazın
 
-## KullanÄ±m
+## Kullanım
 
-| Komut | AÃ§Ä±klama |
+| Komut | Açıklama |
 |-------|----------|
-| `python main.py` | GUI ile baÅŸlat |
-| `python main.py --quick-scan` | 8 saniye hÄ±zlÄ± tarama |
-| `python main.py --add-person` | Yeni kiÅŸi ekle |
-| `python main.py --silent` | Arka planda Ã§alÄ±ÅŸtÄ±r |
+| `python main.py` | GUI ile başlat |
+| `python main.py --quick-scan` | 8 saniye hızlı tarama |
+| `python main.py --add-person` | Yeni kişi ekle |
+| `python main.py --silent` | Arka planda çalıştır |
 
 ## Gereksinimler
 
 - Python 3.8+
 - Windows 10/11
 - Webcam
-- Ä°nternet baÄŸlantÄ±sÄ±
+- İnternet bağlantısı
 
 ## Lisans
 
