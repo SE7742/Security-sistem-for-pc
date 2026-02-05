@@ -1,0 +1,99 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# KİŞİSEL VERİLER - GİTHUB'A YÜKLENMEMELİ
+config.py              # Telegram bot token, chat ID
+.env                   # Environment variables (token, chat ID)
+!env.example           # Örnek env dosyası GitHub'a gitmeli
+*.pkl                  # Yüz tanıma veritabanı
+face_data.pkl         # Yüz veritabanı
+*.db                  # Veritabanı dosyaları
+*.sqlite              # SQLite veritabanları
+*.spec                # PyInstaller spec dosyaları
+
+# WINDOWS SİSTEM DOSYALARI
+*.ini
+*.dat
+*.LOG*
+*.blf
+*.regtrans-ms
+NTUSER.DAT*
+ntuser.dat*
+
+# KULLANICI VERİLERİ
+known_faces/*.jpg     # Kişisel fotoğraflar
+known_faces/*.png
+known_faces/*.jpeg
+!known_faces/README.md  # README hariç
+logs/*.log            # Log dosyaları
+logs/*.txt
+logs/startup_*        # Startup logları
+!logs/README.md       # README hariç
+temp/*.jpg            # Tespit edilen fotoğraflar
+temp/*.png
+!temp/README.md       # README hariç
+screenshots/          # Ekran görüntüleri
+
+# TELEGRAM VERİLERİ
+*.token               # Token dosyaları
+telegram_config.py   # Telegram ayarları
+
+# KAMERA VERİLERİ
+captures/             # Kamera görüntüleri
+detections/           # Tespit görüntüleri
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Geçici dosyalar
+*.tmp
+*.temp
+*.log
+
+# Güvenlik
+*.key
+*.pem
+*.crt
+
+# Geçici Git dosyaları
+tempCodeRunnerFile.py
+*.orig
+
+# PyInstaller
+pc_security.spec
+build/
+dist/
+
+# Yedek dosyalar
+*.bak
+*.backup
+*_backup.py
+config_backup.py

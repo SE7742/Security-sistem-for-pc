@@ -1,0 +1,22 @@
+{
+    "version": "1.1.0",
+    "release_date": "2026-02-04",
+    "python_version": "3.12",
+    "mode": "lite",
+    "features": [
+        "Real-time face detection",
+        "Face recognition with OpenCV LBPH",
+        "Telegram notifications",
+        "GUI interface",
+        "Auto-startup support",
+        "Multi-user support"
+    ],
+    "requirements": {
+        "python": ">=3.8,<3.13",
+        "opencv-contrib-python": ">=4.8.0",
+        "numpy": ">=1.24.0",
+        "Pillow": ">=10.0.0",
+        "requests": ">=2.31.0"
+    },
+    "notes": "Lite Mode - No dlib/face_recognition required. Uses OpenCV LBPH for face recognition."
+}
