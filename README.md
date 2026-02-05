@@ -1,4 +1,4 @@
-﻿# PC GÃ¼venlik Sistemi
+# PC GÃ¼venlik Sistemi
 
 YÃ¼z tanÄ±ma teknolojisi ile Ã§alÄ±ÅŸan Windows gÃ¼venlik sistemi.
 
@@ -13,42 +13,42 @@ YÃ¼z tanÄ±ma teknolojisi ile Ã§alÄ±ÅŸan Windows gÃ¼venlik sistemi.
 
 ### 1. BaÄŸÄ±mlÄ±lÄ±klarÄ± Kur
 
-```bash
+`ash
 pip install -r requirements.txt
-```
+`
 
 ### 2. AyarlarÄ± YapÄ±landÄ±r
 
-```bash
+`ash
 # env.example dosyasÄ±nÄ± .env olarak kopyala
 copy env.example .env
 
 # .env dosyasÄ±nÄ± dÃ¼zenle ve token'larÄ±nÄ± gir
 notepad .env
-```
+`
 
 ### 3. Ã‡alÄ±ÅŸtÄ±r
 
-```bash
+`ash
 python main.py
-```
+`
 
 ## Telegram Bot Kurulumu
 
 1. Telegram'da [@BotFather](https://t.me/BotFather) ile konuÅŸun
-2. /newbot komutu ile bot oluÅŸturun
+2. `/newbot` komutu ile bot oluÅŸturun
 3. Token'Ä± kopyalayÄ±n
 4. [@userinfobot](https://t.me/userinfobot) ile Chat ID Ã¶ÄŸrenin
-5. .env dosyasÄ±na token ve chat ID'yi yazÄ±n
+5. `.env` dosyasÄ±na token ve chat ID'yi yazÄ±n
 
 ## KullanÄ±m
 
 | Komut | AÃ§Ä±klama |
 |-------|----------|
-| python main.py | GUI ile baÅŸlat |
-| python main.py --quick-scan | 8 saniye hÄ±zlÄ± tarama |
-| python main.py --add-person | Yeni kiÅŸi ekle |
-| python main.py --silent | Arka planda Ã§alÄ±ÅŸtÄ±r |
+| `python main.py` | GUI ile baÅŸlat |
+| `python main.py --quick-scan` | 8 saniye hÄ±zlÄ± tarama |
+| `python main.py --add-person` | Yeni kiÅŸi ekle |
+| `python main.py --silent` | Arka planda Ã§alÄ±ÅŸtÄ±r |
 
 ## Gereksinimler
 
