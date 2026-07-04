@@ -113,7 +113,6 @@ class FaceDatabase:
             # Klasördeki tüm dosyaları listele
             try:
                 all_files = os.listdir(KNOWN_FACES_DIR)
-                # logging.info(f"📁 Klasördeki tüm dosyalar: {all_files}")  # Gereksiz log
             except Exception as list_error:
                 logging.error(f"❌ Klasör listeleme hatası: {list_error}")
                 return False, f"Klasör listeleme hatası: {str(list_error)}"
@@ -125,13 +124,8 @@ class FaceDatabase:
                     name_parts = os.path.splitext(filename)[0].split('_')
                     file_person_name = name_parts[0] if name_parts else os.path.splitext(filename)[0]
                     
-                    # logging.info(f"🔍 Dosya kontrol ediliyor: '{filename}' -> Kişi adı: '{file_person_name}'")  # Gereksiz log
-                    
                     if file_person_name == person_name:
                         files_to_delete.append(filename)
-                        # logging.info(f"✅ Silinecek dosya bulundu: {filename}")  # Gereksiz log
-            
-            # logging.info(f"📋 Silinecek dosya listesi: {files_to_delete}")  # Gereksiz log
             
             # Dosyaları sil
             for filename in files_to_delete:
@@ -141,7 +135,6 @@ class FaceDatabase:
                     if os.path.exists(file_path):
                         os.remove(file_path)
                         deleted_files.append(filename)
-                        # logging.info(f"🗑️ Dosya başarıyla silindi: {filename}")  # Gereksiz log
                     else:
                         logging.warning(f"⚠️ Dosya zaten yok: {filename}")
                 except Exception as file_error:
@@ -151,7 +144,6 @@ class FaceDatabase:
             try:
                 if os.path.exists(self.face_data_file):
                     os.remove(self.face_data_file)
-                    # logging.info("🗑️ Yüz verisi dosyası temizlendi")  # Gereksiz log
             except Exception as pickle_error:
                 logging.warning(f"⚠️ Pickle dosyası silinemedi: {pickle_error}")
             

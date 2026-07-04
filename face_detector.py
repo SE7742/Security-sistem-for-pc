@@ -149,7 +149,6 @@ class FaceDetector:
                 self.model_trained = True
                 # Ters mapping
                 self.face_labels = {v: k for k, v in self.face_labels.items()}
-                # logging.info(f"✅ Yüz tanıma modeli {len(faces)} yüz ile eğitildi (Kişi sayısı: {len(set(labels))})")  # Gereksiz log
             else:
                 self.model_trained = False
                 self.face_labels = {}
