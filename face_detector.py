@@ -131,12 +131,12 @@ class FaceDetector:
                             face_roi = cv2.resize(face_roi, (100, 100))
                             
                             faces.append(face_roi)
-                            
-                        if person_name not in self.face_labels:
-                            self.face_labels[person_name] = label_counter
-                            label_counter += 1
-                        
-                        labels.append(self.face_labels[person_name])
+
+                            if person_name not in self.face_labels:
+                                self.face_labels[person_name] = label_counter
+                                label_counter += 1
+
+                            labels.append(self.face_labels[person_name])
                             
                     except Exception as e:
                         logging.error(f"Hafif mod yüz yükleme hatası {image_file}: {e}")
