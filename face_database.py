@@ -81,7 +81,7 @@ class FaceDatabase:
     
     def get_known_faces_count(self):
         """Kayıtlı yüz sayısını döndür"""
-        return len(self.known_face_names)
+        return len(self.get_known_names())
     
     def get_known_names(self):
         """Kayıtlı isimleri döndür (Lite Mod - Dosya tabanlı)"""

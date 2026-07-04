@@ -33,6 +33,7 @@ face_data.pkl         # Yüz veritabanı
 
 # WINDOWS SİSTEM DOSYALARI
 *.ini
+!pytest.ini
 *.dat
 *.LOG*
 *.blf
