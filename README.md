@@ -5,7 +5,7 @@ Yüz tanıma teknolojisi ile çalışan Windows güvenlik sistemi.
 ## Özellikler
 
 - **Yüz Tanıma**: OpenCV + LBPH tabanlı, hafif ve hızlı
-- **Telegram Bildirimi**: Bilinmeyen kişi tespitinde anlık uyarı
+- **Telegram Bildirimi**: Kayıtlı olmayan kişi tespitinde anlık uyarı
 - **Otomatik Başlangıç**: Windows açılışında 8 saniye güvenlik taraması
 - **Kullanıcı Arayüzü**: Kolay yönetim için GUI
 
