@@ -1,11 +1,8 @@
 import os
 import pickle
-import numpy as np
-import cv2
 
 # PC Güvenlik Sistemi - Lite Mod (Dosya tabanlı yönetim)
 print("🗃️ FaceDatabase: Lite Mod aktif (Dosya tabanlı)")
-from PIL import Image
 import logging
 from config import KNOWN_FACES_DIR
 

@@ -117,10 +117,7 @@ Lütfen durumu kontrol edin.
         # Fotoğraf varsa gönder (mesaj başarısız olsa bile)
         if photo_path:
             photo_success = self.send_photo(photo_path, "🔴 Tespit edilen bilinmeyen kişi")
-            if photo_success:
-                # logging.info("📸 Güvenlik fotoğrafı Telegram'a gönderildi")  # Gereksiz log
-                pass # Removed logging.info("📸 Güvenlik fotoğrafı Telegram'a gönderildi")
-            else:
+            if not photo_success:
                 logging.error("❌ Güvenlik fotoğrafı gönderilemedi")
         else:
             logging.warning("⚠️ Fotoğraf yolu belirtilmedi")
