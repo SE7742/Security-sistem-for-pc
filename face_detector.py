@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 
 # PC Güvenlik Sistemi - Lite Mod (OpenCV tabanlı)
-print("🚀 PC Güvenlik Sistemi - Lite Mod aktif (OpenCV + LBPH)")
 import logging
 import time
 from datetime import datetime
@@ -131,12 +130,12 @@ class FaceDetector:
                             face_roi = cv2.resize(face_roi, (100, 100))
                             
                             faces.append(face_roi)
-                            
-                        if person_name not in self.face_labels:
-                            self.face_labels[person_name] = label_counter
-                            label_counter += 1
-                        
-                        labels.append(self.face_labels[person_name])
+
+                            if person_name not in self.face_labels:
+                                self.face_labels[person_name] = label_counter
+                                label_counter += 1
+
+                            labels.append(self.face_labels[person_name])
                             
                     except Exception as e:
                         logging.error(f"Hafif mod yüz yükleme hatası {image_file}: {e}")
@@ -149,7 +148,6 @@ class FaceDetector:
                 self.model_trained = True
                 # Ters mapping
                 self.face_labels = {v: k for k, v in self.face_labels.items()}
-                # logging.info(f"✅ Yüz tanıma modeli {len(faces)} yüz ile eğitildi (Kişi sayısı: {len(set(labels))})")  # Gereksiz log
             else:
                 self.model_trained = False
                 self.face_labels = {}

@@ -1,5 +1,9 @@
 name: Test PC Security System (Lite Mode)
 
+env:
+  PYTHONUTF8: "1"
+  PYTHONIOENCODING: "utf-8"
+
 on:
   push:
     branches: [ main, develop ]
@@ -27,6 +31,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        pip install -r requirements-dev.txt
     
     - name: Create config file (Unix)
       if: matrix.os != 'windows-latest'
@@ -50,8 +55,22 @@ jobs:
         python -c "import PIL; print('Pillow:', PIL.__version__)"
         python -c "import requests; print('Requests:', requests.__version__)"
     
-    - name: Run module tests
+    - name: Import config
+      run: |
+        python -c "import config; print('Config OK')"
+
+    - name: Import FaceDatabase
       run: |
         python -c "from face_database import FaceDatabase; print('FaceDatabase OK')"
+
+    - name: Import TelegramNotifier
+      run: |
         python -c "from telegram_notifier import TelegramNotifier; print('TelegramNotifier OK')"
+
+    - name: Import FaceDetector
+      run: |
         python -c "from face_detector import FaceDetector; print('FaceDetector OK')"
+
+    - name: Run unit tests
+      run: |
+        python -m pytest

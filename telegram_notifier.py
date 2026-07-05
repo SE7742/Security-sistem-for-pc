@@ -32,7 +32,6 @@ class TelegramNotifier:
             response = requests.post(url, json=payload, timeout=10)
             
             if response.status_code == 200:
-                # logging.info("Telegram bildirimi gönderildi")  # Gereksiz log
                 return True
             else:
                 logging.error(f"Telegram API hatası: {response.status_code}")
@@ -74,7 +73,6 @@ class TelegramNotifier:
             if response.status_code == 200:
                 result = response.json()
                 if result.get('ok'):
-                    # logging.info(f"✅ Telegram fotoğrafı başarıyla gönderildi: {photo_path}")  # Gereksiz log
                     return True
                 else:
                     logging.error(f"❌ Telegram API hatası: {result.get('description', 'Bilinmeyen hata')}")
@@ -117,10 +115,7 @@ Lütfen durumu kontrol edin.
         # Fotoğraf varsa gönder (mesaj başarısız olsa bile)
         if photo_path:
             photo_success = self.send_photo(photo_path, "🔴 Tespit edilen bilinmeyen kişi")
-            if photo_success:
-                # logging.info("📸 Güvenlik fotoğrafı Telegram'a gönderildi")  # Gereksiz log
-                pass # Removed logging.info("📸 Güvenlik fotoğrafı Telegram'a gönderildi")
-            else:
+            if not photo_success:
                 logging.error("❌ Güvenlik fotoğrafı gönderilemedi")
         else:
             logging.warning("⚠️ Fotoğraf yolu belirtilmedi")
@@ -175,7 +170,6 @@ Sistem güvenlik modunda çalışıyor.
                 bot_info = response.json()
                 if bot_info.get('ok'):
                     bot_name = bot_info['result'].get('first_name', 'Bot')
-                    # logging.info(f"✅ Telegram bot bağlantısı başarılı: {bot_name}")  # Gereksiz log
                     return True
             
             logging.error("❌ Telegram bot bağlantısı başarısız")
@@ -213,7 +207,6 @@ Sistem güvenlik modunda çalışıyor.
                 logging.info("🗑️ Test resmi temizlendi")
             
             if success:
-                # logging.info("✅ Telegram fotoğraf testi başarılı!")  # Gereksiz log
                 return True
             else:
                 logging.error("❌ Telegram fotoğraf testi başarısız!")
