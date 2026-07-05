@@ -2,7 +2,6 @@ import os
 import pickle
 
 # PC Güvenlik Sistemi - Lite Mod (Dosya tabanlı yönetim)
-print("🗃️ FaceDatabase: Lite Mod aktif (Dosya tabanlı)")
 import logging
 from config import KNOWN_FACES_DIR
 

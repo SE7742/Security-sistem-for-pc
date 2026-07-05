@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 
 # PC Güvenlik Sistemi - Lite Mod (OpenCV tabanlı)
-print("🚀 PC Güvenlik Sistemi - Lite Mod aktif (OpenCV + LBPH)")
 import logging
 import time
 from datetime import datetime
