@@ -23,7 +23,9 @@ def get_env(key, default=None, type_func=str):
     if value is None:
         return default
     if type_func == bool:
-        return value.lower() in ('true', '1', 'yes', 'on')
+        if isinstance(value, bool):
+            return value
+        return str(value).lower() in ('true', '1', 'yes', 'on')
     if type_func == int:
         try:
             return int(value)
@@ -35,11 +37,13 @@ def get_env(key, default=None, type_func=str):
         except ValueError:
             return default
     if type_func == tuple:
+        if isinstance(value, tuple):
+            return value
         # Tuple formatı: "(0, 255, 0)" veya "0,255,0"
         try:
-            value = value.strip('()')
+            value = str(value).strip('()')
             return tuple(map(int, value.split(',')))
-        except (ValueError, AttributeError):
+        except ValueError:
             return default
     return value
 
