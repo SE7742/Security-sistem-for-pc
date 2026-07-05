@@ -6,7 +6,12 @@
 # Önce .env dosyasından okur, yoksa buradaki değerleri kullanır.
 
 import os
-from dotenv import load_dotenv
+
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    def load_dotenv(*args, **kwargs):
+        return False
 
 # .env dosyasını yükle (varsa)
 load_dotenv()
